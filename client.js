@@ -5,7 +5,7 @@ const shortIt = document.getElementById("shortIt");
 const urlAddress = document.getElementById("url");
 const link = document.getElementById("links");
 const alert = document.querySelector(".alert");
-var registeredUrl = JSON.parse(localStorage.getItem("storedUrl")).url;
+
 const copy = document.querySelectorAll(".copy");
 
 const shortUrlApi = "https://api.shrtco.de/v2/shorten?url=";
@@ -29,14 +29,13 @@ hamburger.addEventListener("click", function() {
   show = !show;
 });
 
+localStorage.setItem("storedUrl", JSON.stringify({"url": []})); 
+var registeredUrl = JSON.parse(localStorage.getItem("storedUrl")).url;
 if(registeredUrl.length >= 1) {
   registeredUrl.forEach(elem => {
     addLink(elem);
   });
 }
-//empty localStorage
-//localStorage.setItem("storedUrl", JSON.stringify({"url": []})); 
-
 shortIt.addEventListener("click", function(event) {
   event.preventDefault();
   let a = [];
