@@ -1,0 +1,579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+header .logo {
+  margin-right: 2.5rem;
+}
+header .desk {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+header li a:hover {
+  color: hsl(257, 27%, 26%);
+  font-weight: 700;
+}
+header a {
+  color: hsl(257, 7%, 63%);
+  font-size: 0.8rem;
+}
+.btn, button {
+  background: hsl(180, 66%, 49%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+header .btn {
+  padding: 0.2rem 1.7rem 0.4rem 1.7rem;
+  border-radius: 1.5rem;
+}
+.btn::after, button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+header .btn:hover::after, button:hover::after {
+  visibility: visible;
+}
+header .btn:hover a {
+  font-weight: 500;
+  color: white;
+}
+header .btn a {
+  color: white;
+}
+main section:first-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+main section:first-of-type h1 {
+  font-size: 2.9rem;
+  color: hsl(255, 11%, 22%);
+  line-height: 3.2rem;
+}
+p {
+  color: hsl(0, 0%, 75%);
+  font-size: 0.9rem;
+}
+main section:first-of-type p {
+  margin-bottom: 1.5rem;
+}
+button {
+  padding: 0.6rem 1.7rem;
+  border-radius: 1.5rem;
+}
+main section:first-of-type > div:last-of-type {
+  overflow-x: hidden;
+}
+main section:first-of-type img {
+  width: 115%;
+}
+main section:nth-of-type(2) {
+  background: hsl(263, 23%, 89%);
+  position: relative;
+}
+main section:nth-of-type(2) form {
+  border-radius: 5px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  align-items: center;
+  background: hsl(255, 11%, 22%) url("images/bg-shorten-desktop.svg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%,-50%);
+}
+form input, form button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+form button::after {
+  border-radius: 4px;
+}
+form button {
+  margin-left: 1rem;
+}
+form > div {
+  flex-grow: 1;
+  position: relative;
+}
+form input {
+  display: block;
+  width: 100%;
+  background: white;
+  border: none;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: hsl(0, 0%, 75%);
+  font-size: 0.9rem;
+}
+:-moz-placeholder {
+  color: hsl(0, 0%, 75%);
+  font-size: 0.9rem;
+}
+.alert {
+  font-size: 0.7rem;
+  color: hsl(0, 87%, 67%);
+  position: absolute;
+  left: 0;
+  top: 2.6rem;
+}
+.link {
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+.link > div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.link > div a:first-of-type {
+  color: hsl(255, 11%, 22%);
+}
+.link > div a:last-of-type {
+  color: hsl(180, 66%, 49%);
+}
+.copy {
+  border-radius: 3px;
+  padding: 0.3rem 1rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+.copy::after {
+  border-radius: 4px;
+}
+main section:nth-of-type(2) > div:nth-of-type(2) h1,
+ main section:nth-of-type(2) > div:nth-of-type(2) p {
+  text-align: center;
+}
+main section:nth-of-type(2) h1 {
+  font-size: 2rem;
+  color: hsl(255, 11%, 22%);
+  margin: 0.5rem auto;
+  margin-top: 3.5rem;
+}
+main section:nth-of-type(2) > div:nth-of-type(2) p {
+  margin: 0 auto;
+  color: hsl(257, 7%, 63%);
+}
+main section:nth-of-type(2) > div:last-of-type {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 1rem;
+  position: relative;
+}
+main section:nth-of-type(2) > div:last-of-type::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  background: hsl(180, 66%, 49%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.pros {
+  width: 32%;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+  padding: 3rem 1.2rem 1.8rem 1.2rem;
+}
+.pros div {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  left: 1.2rem;
+  top: 0;
+  background: hsl(257, 27%, 26%);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pros div img {
+  width: 1.8rem;
+}
+.pros h2 {
+  font-size: 1.2rem;
+  color: hsl(255, 11%, 22%);
+  margin-bottom: 1rem;
+}
+.pros p {
+  color: hsl(257, 7%, 63%);
+  font-size: 0.87rem;
+}
+main section:last-of-type {
+  background: hsl(257, 27%, 26%) url("images/bg-boost-desktop.svg") no-repeat;
+  background-size: cover;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section:last-of-type h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+footer {
+  background: hsl(260, 8%, 14%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+footer ul li {
+  font-size: 0.8rem;
+}
+footer ul li:not(:last-of-type) {
+  margin-bottom: 0.7rem;
+}
+footer ul .head {
+  color: white;
+  padding-bottom: 0.4rem;
+}
+footer ul li a {
+  color: hsl(0, 0%, 75%);
+}
+footer ul li a:hover {
+  color: hsl(180, 66%, 49%);
+}
+footer i {
+  font-size: 1.3rem;
+  color: white;
+}
+footer i:hover {
+  color: hsl(180, 66%, 49%);
+}
+footer > div > div a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width:990px) {
+  main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .mob {
+    display: none;
+  }
+  header {
+    padding: 1.5rem 10%;
+  }
+  main section:first-of-type {
+    padding-left: 10%;
+  }
+  main section:first-of-type > div {
+    width: 45%;
+  }
+  main section:nth-of-type(2) {
+    padding: 3.7rem 10% 3rem 10%;
+  }
+  main section:nth-of-type(2) form {
+    width: 80%;
+  }
+  main section:nth-of-type(2) > div:nth-of-type(2) p {
+    width: 50%;
+    min-width: 400px;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div:nth-child(2) {
+    margin-top: 3.2rem;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div:nth-child(3) {
+    margin-top: 6.4rem;
+  }
+  footer {
+    padding: 2rem 10%;
+  }
+  footer > div {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width:750px) and (max-width:989px) {
+  .mob {
+    display: none;
+  }
+  header {
+    padding: 1.5rem;
+  }
+  main section:first-of-type {
+    padding-left: 1.5rem;
+  }
+  main section:first-of-type > div {
+    width: 45%;
+  }
+  main section:nth-of-type(2) {
+    padding: 3.7rem 1.5rem 3rem 1.5rem;
+  }
+  main section:nth-of-type(2) form {
+    width: calc(100% - 3rem);
+  }
+  main section:nth-of-type(2) > div:nth-of-type(2) p {
+    width: 50%;
+    min-width: 400px;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div:nth-child(2) {
+    margin-top: 3.2rem;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div:nth-child(3) {
+    margin-top: 6.4rem;
+  }
+  footer {
+    padding: 2rem 1.5rem;
+  }
+  footer > div {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width:749px) {
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  header {
+    padding: 1.5rem;
+    position: relative;
+    justify-content: space-between;
+  }
+  main section:first-of-type > div:last-of-type {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  main section:first-of-type img {
+    width: 140%;
+  }
+  main section:first-of-type > div:first-of-type {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  main section:first-of-type h1,
+  main section:first-of-type p {
+    text-align: center;
+  }
+  main section:first-of-type h1 {
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+  }
+  #hamburger {
+    color: hsl(257, 7%, 63%);
+    cursor: pointer;
+  }
+  nav.desk {
+    display: none;
+  }
+  #menu {
+    display: none;
+    width: calc(100% - 2rem);
+    background: hsl(257, 27%, 26%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    transform: translateY(100%);
+    padding: 1rem;
+  }
+  #menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menu ul:first-of-type {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(218, 218, 218, 0.4);
+  }
+  #menu a {
+    color: white;
+    font-weight: 500;
+  }
+  #menu ul li {
+    margin: 0;
+  }
+  #menu ul li:not(:last-of-type) {
+    margin-bottom: 0.6rem;
+  }
+  #menu ul:last-of-type li {
+    margin-top: 0.6rem;
+  }
+  #menu .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+  main section:first-of-type {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 8rem;
+  }
+  main section:nth-of-type(2) {
+    padding: 5rem 1rem 3rem 1rem;
+  }
+  main section:nth-of-type(2) form {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.2rem;
+    background-image: url("images/bg-shorten-mobile.svg");
+    background-size: 75%;
+    background-position: 105% 225%;
+  }
+  form div, form button {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  form input {
+    margin-bottom: 1.7rem;
+  }
+  .link {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .link > div {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+  }
+  .link > div a, .link button {
+    display: block;
+  }
+  .link > div a {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  .link > div a:first-of-type {
+    border-bottom: 1px solid hsl(0, 11%, 91%);
+  }
+  .link button {
+    width: calc(100% - 1.6rem);
+    margin: 0 auto 0.8rem;
+  }
+  main section:nth-of-type(2) h1 {
+    font-size: 1.5rem;
+  }
+  main section:nth-of-type(2) > div:nth-of-type(2) p {
+    width: 100%;
+    padding: 0;
+  }
+  main section:nth-of-type(2) > div:last-of-type {
+    flex-direction: column;
+    align-items: center;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div {
+    width: 100%;
+  }
+  main section:nth-of-type(2) > div:last-of-type > div:not(:last-of-type) {
+    margin-bottom: 4rem;
+  }
+  .pros > div {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .pros h2, .pros p {
+    text-align: center;
+    width: 100%;
+  }
+  main section:nth-of-type(2) > div:last-of-type::before {
+    width: 0.4rem;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main section:last-of-type {
+    background-image: url("images/bg-boost-mobile.svg");
+    background-size: 100%;
+    background-position: center;
+    padding: 4rem 0;
+  }
+  main section:last-of-type h1 {
+    font-size: 1.5rem;
+  }
+  footer {
+    padding: 2.5rem 0;
+  }
+  footer > img {
+    margin-bottom: 2.2rem;
+  }
+  footer, footer > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul {
+    margin-bottom: 2rem;
+  }
+  footer ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
